@@ -1,0 +1,17 @@
+.title-imput {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+.new-post-btn {
+  box-sizing: border-box;
+  width: 500px;
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+}
