@@ -1,4 +1,11 @@
-.title-imput {
+.post-title-imput {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+.post-text-input {
   display: block;
   box-sizing: border-box;
   margin-bottom: 20px;
