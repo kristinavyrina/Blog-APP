@@ -3,32 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Блог</title>
-    <!--<link rel="stylesheet" href="reset.css" />-->
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Приложение блог</h1>
-    <div class="row">
-      <div class="col">
-        <h2>Новый пост</h2>
+    <section class="blog-app">
+      <div class="container">
+        <ul class="blog-app__inner">
+          <li class="blog-app__column">
+            <h1 class="new-post-header">Новый пост</h1>
 
-        <input class="js-post-title-input post-title-imput" type="text" />
+            <div class="post-creating-items">
+              <textarea
+                class="js-post-title-input post-title-input"
+                type="text"
+                placeholder="Заголовок"
+                cols="35"
+                rows="2"
+              ></textarea>
+              <textarea
+                class="js-post-content-input post-content-input"
+                type="text"
+                placeholder="Напиши пост"
+                cols="35"
+                rows="6"
+              ></textarea>
+              <button
+                class="js-post-publish-btn post-publish-btn"
+                type="submit"
+              >
+                <p class="post-publish-btn__text">Опубликовать</p>
+              </button>
+              <button class="js-post-delete-btn post-delete-btn" type="submit">
+                <p class="post-publish-btn__text">Очистить историю</p>
+              </button>
+              <div class="js-title-warning warning" style="display: none"></div>
+              <div
+                class="js-content-warning warning"
+                style="display: none"
+              ></div>
+            </div>
+          </li>
 
-        <input class="js-post-text-input post-text-input" type="text" />
-
-        <button class="js-new-post-btn new-post-btn">Опубликовать</button>
+          <li class="blog-app__column">
+            <h2 class="feed-header">Лента</h2>
+            <ul class="js-feed feed"></ul>
+            <p class="js-empty-feed-message empty-feed-message">
+              Лента пуста...
+            </p>
+          </li>
+        </ul>
       </div>
-      <div class="col">
-        <h2>Лента</h2>
-
-        <div class="js-posts posts">
-          Лента пуста ....
-          <!--<p class="post_title">Заголовок</p>-->
-        </div>
-      </div>
-    </div>
-
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
